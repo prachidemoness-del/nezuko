@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Monotype Corsiva', cursive;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+  color: white;
+}
+
+/* Title */
+.title {
+  font-size: 42px;
+}
+
+/* Instruction */
+.instruction {
+  font-size: 20px;
+}
+
+/* Box */
+.box {
+  font-size: 90px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.1); }
+}
+
+/* 🐱🐶 PETS */
+.pet {
+  position: absolute;
+  width: 110px;
+  pointer-events: none;
+  animation: float 6s infinite ease-in-out;
+}
+
+.p1 { top: 10%; left: 5%; }
+.p2 { top: 30%; left: 15%; }
+.p3 { top: 60%; left: 8%; }
+
+.p4 { top: 15%; right: 5%; }
+.p5 { top: 40%; right: 12%; }
+.p6 { top: 65%; right: 7%; }
+
+@keyframes float {
+  50% { transform: translateY(-25px); }
+}
+
+/* 💖 HEARTS FROM PETS */
+.pet::after {
+  content: "💖";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  font-size: 18px;
+  animation: hearts 2s infinite;
+}
+
+@keyframes hearts {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-40px); opacity: 0; }
+}
+
+/* Message */
+.typing {
+  font-size: 28px;
+  font-weight: bold;
+  width: 70%;
+  margin: auto;
+}
+
+/* Cake */
+.cake {
+  font-size: 90px;
+  cursor: pointer;
+}
+
+/* Slideshow */
+#slide {
+  width: 450px;
+  height: 280px;
+  border-radius: 20px;
+}
+
+/* Ending */
+.fade {
+  font-size: 30px;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* 📱 LANDSCAPE LOCK */
+#rotateHint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 999;
+}
+
+/* Hide when landscape */
+@media (orientation: landscape) {
+  #rotateHint {
+    display: none;
+  }
+}
